@@ -1,6 +1,6 @@
 ## Amazon Live Currency Converter
 
-This project is a Chrome Plugin, which is a Currency converter using the Google Finance Currency converter. When you mouse over on a item price, the plugin will to show thar price, for now, in Dominican Pesos.
+This project is a Chrome Plugin, which is a Currency converter using Google Finance. When you mouse over an item price, the plugin will show that price, for now, in Dominican Pesos.
 
 ## Install dependencies
 
