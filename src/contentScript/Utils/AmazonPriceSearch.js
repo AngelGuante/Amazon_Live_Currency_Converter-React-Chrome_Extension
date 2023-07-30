@@ -7,17 +7,31 @@ const AmazonPricesSearch = async () => {
 
     const pricesArray = document.getElementsByClassName('a-price-whole')
     Array.prototype.forEach.call(pricesArray, (x) => {
-        const element = document.createElement('span')
+        
         const valueRounded = Math.round(((value * x.textContent) + Number.EPSILON) * 100) / 100
-        element.textContent = DOPeso(valueRounded)
-        element.style.display = 'none'
-        x.insertAdjacentElement('afterend', element)
+        const div = document.createElement('div');
 
-        x.addEventListener('mouseover', () => {
-            element.style.display = 'block'
-        })
+        x.addEventListener('mouseenter', () => {
+            div.innerHTML = `${DOPeso(valueRounded)}`
+            div.style.position = 'absolute'
+            div.style.display = 'inline-block'
+            div.style.backgroundColor = '#232F3E'
+            div.style.color = 'white'
+            div.style.top = '10px'
+            div.style.left = '10px'
+            div.style.padding = "4px 4px"
+            div.style.zIndex = 100
+
+            document.body.appendChild(div);
+        });
+
+        x.addEventListener('mousemove', (event) => {              
+            div.style.left = event.clientX + 'px'
+            div.style.top = window.scrollY + event.clientY + 'px'
+        });
+
         x.addEventListener('mouseout', () => {
-            element.style.display = 'none'
+            div.style.display = 'none'
         })
     })
 }
