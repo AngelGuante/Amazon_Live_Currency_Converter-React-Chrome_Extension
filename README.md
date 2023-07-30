@@ -22,3 +22,9 @@ search and select the dist folder and press the ok button.
 
 Our extension will be added to our extensions.
 Now press the Extensions button on the Chrome bar, and pin the extension to the Chrome bar.
+
+## How it works
+
+When the mouse is over a price, it will show a tooltip with selected currency
+
+![image](https://github.com/AngelGuante/Amazon_Live_Currency_Converter-React-Chrome_Extension/assets/49294128/c37ff826-67fc-4266-b05c-f3cf5ff95306)
